@@ -1,0 +1,667 @@
+body {
+    margin: 0px;
+    background-color: #EAF6F6;
+}
+
+/* header con barra de nav */
+#header {
+    background: #2e4450;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+#header.header-scrolled {
+    top: 0;
+}
+
+#header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#header .logo a {
+    color: #66BFBF;
+    text-decoration: none;
+}
+
+#header .logo img {
+    max-height: 40px;
+}
+
+.appointment-btn {
+    margin-left: 25px;
+    background: #66BFBF;
+    color: #2e4450;
+    border: solid 2px #2e4450;
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.appointment-btn:hover {
+    color: #EAF6F6;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .appointment-btn {
+        margin: 0 15px 0 0;
+        padding: 6px 18px;
+    }
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar>ul>li {
+    position: relative;
+    white-space: nowrap;
+    padding: 8px 0 8px 20px;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #EAF6F6;
+    white-space: nowrap;
+    transition: 0.3s;
+    border-bottom: 2px solid #EAF6F6;
+    padding: 5px 2px;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #66BFBF;
+    border-color: #66BFBF;
+}
+
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #EAF6F6;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: none;
+    color: #082744;
+    border: none;
+}
+
+.navbar .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+    color: #66BFBF;
+}
+
+.navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+
+    .navbar .dropdown .dropdown:hover>ul {
+        left: -100%;
+    }
+}
+
+/* encabezado con imagen de fondo (hero) */
+#hero {
+    width: 100%;
+    height: 90vh;
+    background: url("https://medicalaid.org/wp-content/uploads/2021/07/Least-Competitive-Medical-Specialities.jpg") top center;
+    background-size: cover;
+    margin-bottom: -200px;
+}
+
+#hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(220, 209, 209, 0.6);
+}
+
+#hero .container {
+    position: relative;
+}
+
+#hero h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #2e4450;
+}
+
+#hero h2 {
+    color: #2e4450;
+    font-family: 'Lato', sans-serif;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+#hero .btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #2e4450;
+    background: #66BFBF;
+}
+
+#hero .btn-get-started:hover {
+    color: #EAF6F6;
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+/* Seccion de bienvenida y porque escogernos */
+section {
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #EAF6F6;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #2c4964;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+.why-us .content {
+    padding: 30px;
+    background: #2e4450;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    color: #EAF6F6;
+}
+
+.why-us .content h3 {
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    color: #66BFBF;
+    margin-bottom: 30px;
+}
+
+.why-us .content p {
+    margin-bottom: 30px;
+}
+
+.why-us .content .more-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+}
+
+.why-us .content .more-btn i {
+    font-size: 14px;
+}
+
+.why-us .content .more-btn:hover {
+    color: #2e4450;
+    background: #fff;
+}
+
+.why-us .icon-boxes .icon-box {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    border-radius: 10px;
+    background: #66BFBF;
+    ;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%;
+}
+
+.why-us .icon-boxes .icon-box i {
+    font-size: 40px;
+    color: #2e4450;
+    margin-bottom: 30px;
+}
+
+.why-us .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2e4450;
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 30px 0;
+}
+
+.why-us .icon-boxes .icon-box p {
+    font-size: 15px;
+    color: #EAF6F6;
+}
+
+/* Conteo de parametros de calidad*/
+.counts {
+    padding: 70px 0 60px;
+}
+
+.counts .count-box {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #2e4450
+}
+
+.counts .count-box i {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    background: #66BFBF;
+    ;
+    color: #2e4450;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+
+.counts .count-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #082744;
+}
+
+.counts .count-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #EAF6F6;
+    font-size: 20px;
+}
+
+/* footer */
+#footer {
+    color: #EAF6F6;
+    font-size: 14px;
+    background: #2e4450;
+}
+
+#footer .credits {
+    padding-top: 5px;
+    font-size: 13px;
+    color: #66BFBF;
+}
+
+#footer .credits a, .paragraph a:hover {
+    color: #66BFBF;
+}
+
+#footer .credits a:hover {
+    color: #EAF6F6;
+}
+
+#footer .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #2e4450;
+    color: #66BFBF;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #66BFBF;
+    color: #2e4450;
+    text-decoration: none;
+}
+
+/* boton back to top */
+#btn-back-to-top {
+    position: fixed;
+    background-color: #66BFBF;
+    color: #EAF6F6;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+/*Formularios de registro y login*/
+.formstyle {
+    font-family: "Poppins", sans-serif;
+    background-color: #EAF6F6;
+    color: #2e4450
+}
+
+.formstyle h1 {
+    color: #66BFBF;
+}
+
+.login {
+    font-family: "Poppins", sans-serif;
+    background-color: #66BFBF;
+    color: #2e4450;
+}
+
+.login-btn {
+    margin-left: 25px;
+    background: #2e4450;
+    color: #66BFBF;
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.login-btn:hover {
+    color: #EAF6F6;
+}
+
+/* página de contacto */
+.contact .info {
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    padding: 15px;
+    background: #EAF6F6;
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #EAF6F6;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #2e4450;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c4964;
+}
+
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #EAF6F6;
+}
+
+.contact .info .email,
+.contact .info .phone {
+    margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: #EAF6F6;
+    color: #2e4450;
+}
+
+.about-us {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    color: #2e4450;
+}
+
+/* pagina de pedir cita */
+.appointment form {
+    width: 100%;
+    height: fit-content;
+}
+
+.appointment .form-group {
+    padding-bottom: 8px;
+}
+
+/* pagina de servicios */
+.services p, .paragraph {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    color:#2e4450
+}
+
+#boxcontainer {
+    margin-left: 380px;
+    font-family: "Poppins", sans-serif;
+
+}
+.services .icon-box {
+    text-align: center;
+    background-color: #2e4450;
+    border: 1px solid #d5e1ed;
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+}
+
+.services .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #66BFBF;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+    color: #fff;
+    font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: #8ef0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    transform: translateZ(-1px);
+}
+
+.services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.services .icon-box h4 a {
+    color: #66BFBF;
+}
+
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 18px;
+    margin-bottom: 0;
+    color: #EAF6F6
+}
+
+.services .icon-box:hover {
+    background: #66BFBF;
+    border-color: #66BFBF;
+}
+
+.services .icon-box:hover .icon {
+    background: #2e4450;
+}
+
+.services .icon-box:hover .icon i, .profilelink:hover {
+    color: #66BFBF
+}
+
+.services .icon-box:hover .icon::before {
+    background: #425a67;
+}
+
+.services .icon-box:hover h4 a,
+.services .icon-box:hover p, .paragraph a, .profilelink {
+    color: #2e4450;
+}
+
+/* tabla de pacientes */
+.pat-table {
+    background-color: #2e4450;
+    color:#EAF6F6;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color:#2e4450;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cardtitle {
+    font-family: "Poppins", sans-serif;
+}
+
+.cardtext {
+    font-family: 'Lato', sans-serif;
+}
+
+/* tabla perfiles*/
+.profiletab {
+    background-color: #2e4450;
+    color:#EAF6F6;
+    font-family: "Lato", sans-serif;
+}
+
+.profiletab tr:hover {
+    color: #2e4450;
+    background-color: #66BFBF;
+}
